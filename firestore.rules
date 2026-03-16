@@ -1,0 +1,66 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // ===============================================================
+    // Assumed Data Model
+    // ===============================================================
+    //
+    // Collection: projects
+    // Document ID: auto-generated
+    // Fields:
+    //   - id: number (required)
+    //   - title: string (required)
+    //   - category: string (required)
+    //   - image: string (required)
+    //   - summary: string (required)
+    //   - colSpan: string (required)
+    //   - aspect: string (required)
+    //   - description: string (required)
+    //   - client: string (required)
+    //   - year: string (required)
+    //   - services: list of strings (required)
+    //   - createdAt: timestamp (optional)
+    //
+    // ===============================================================
+
+    // Helper Functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      // Allow the specific user email to be the admin
+      return isAuthenticated() && request.auth.token.email == "abedin.foysal89@gmail.com" && request.auth.token.email_verified == true;
+    }
+
+    function hasRequiredFields(fields) {
+      return request.resource.data.keys().hasAll(fields);
+    }
+
+    function isValidProject(data) {
+      return hasRequiredFields(['id', 'title', 'category', 'image', 'summary', 'colSpan', 'aspect', 'description', 'client', 'year', 'services']) &&
+             data.id is number &&
+             data.title is string && data.title.size() > 0 && data.title.size() < 200 &&
+             data.category is string && data.category.size() > 0 && data.category.size() < 100 &&
+             data.image is string && data.image.size() > 0 && data.image.size() < 1000 &&
+             data.summary is string && data.summary.size() > 0 && data.summary.size() < 500 &&
+             data.colSpan is string && data.colSpan.size() > 0 && data.colSpan.size() < 100 &&
+             data.aspect is string && data.aspect.size() > 0 && data.aspect.size() < 100 &&
+             data.description is string && data.description.size() > 0 && data.description.size() < 5000 &&
+             data.client is string && data.client.size() > 0 && data.client.size() < 200 &&
+             data.year is string && data.year.size() > 0 && data.year.size() < 50 &&
+             data.services is list && data.services.size() <= 20;
+    }
+
+    match /projects/{projectId} {
+      // Public can read projects
+      allow read: if true;
+      
+      // Only admin can create, update, delete
+      allow create: if isAdmin() && isValidProject(request.resource.data);
+      allow update: if isAdmin() && isValidProject(request.resource.data);
+      allow delete: if isAdmin();
+    }
+  }
+}

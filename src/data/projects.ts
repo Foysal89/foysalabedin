@@ -1,0 +1,58 @@
+export const projects = [
+  {
+    id: 1,
+    title: "Aura Coffee",
+    category: "Coffee Brand Logo",
+    image:
+      "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=1000&auto=format&fit=crop&grayscale",
+    summary: "A minimalist wordmark and symbol for a premium coffee roaster.",
+    colSpan: "col-span-12 lg:col-span-8",
+    aspect: "aspect-[16/9] lg:aspect-[2/1]",
+    description: "Aura Coffee approached us to create a brand identity that reflects their commitment to ethically sourced, premium coffee beans. The goal was to design a minimalist wordmark and symbol that feels both modern and timeless. We focused on clean typography and a subtle, evocative mark that represents the 'aura' or essence of a perfect cup of coffee. The resulting identity is versatile, working beautifully across packaging, digital platforms, and physical spaces.",
+    client: "Aura Roasters Inc.",
+    year: "2023",
+    services: ["Brand Identity", "Logo Design", "Packaging"],
+  },
+  {
+    id: 2,
+    title: "Vela",
+    category: "Fashion Brand Monogram",
+    image:
+      "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop&grayscale",
+    summary: "An elegant interlocking monogram for a modern fashion label.",
+    colSpan: "col-span-12 lg:col-span-4",
+    aspect: "aspect-square",
+    description: "Vela is a contemporary fashion label known for its elegant, understated designs. They needed a monogram that could serve as a standalone mark on apparel and accessories, while also anchoring their broader brand identity. We developed an interlocking 'V' and 'L' that is both sophisticated and memorable. The monogram is designed to scale gracefully, maintaining its legibility and impact whether embossed on leather goods or displayed on a large billboard.",
+    client: "Vela Fashion",
+    year: "2024",
+    services: ["Monogram Design", "Brand Guidelines", "Apparel Branding"],
+  },
+  {
+    id: 3,
+    title: "Nexus",
+    category: "Tech Startup Wordmark",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000&auto=format&fit=crop&grayscale",
+    summary: "A clean, geometric wordmark for an AI software company.",
+    colSpan: "col-span-12 lg:col-span-4",
+    aspect: "aspect-square",
+    description: "Nexus is an innovative AI software company building tools for the future of work. They required a wordmark that communicated precision, technology, and forward-thinking. We crafted a custom geometric logotype with subtle tech-inspired details. The clean lines and balanced proportions convey a sense of reliability and cutting-edge capability, positioning Nexus as a leader in their field.",
+    client: "Nexus AI",
+    year: "2023",
+    services: ["Wordmark Design", "Visual Identity", "Digital Assets"],
+  },
+  {
+    id: 4,
+    title: "Lumina",
+    category: "Premium Skincare Logo",
+    image:
+      "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop&grayscale",
+    summary: "A delicate serif wordmark and minimalist packaging system.",
+    colSpan: "col-span-12 lg:col-span-8",
+    aspect: "aspect-[16/9] lg:aspect-[2/1]",
+    description: "Lumina is a premium skincare brand focused on natural, efficacious ingredients. Their identity needed to reflect purity, luxury, and scientific backing. We designed a delicate serif wordmark that feels refined and trustworthy. This was paired with a minimalist packaging system that uses ample white space and subtle typographic hierarchy to highlight the quality of the products. The overall effect is an identity that feels both clinical and luxurious.",
+    client: "Lumina Skincare",
+    year: "2024",
+    services: ["Brand Identity", "Packaging Design", "Art Direction"],
+  },
+];

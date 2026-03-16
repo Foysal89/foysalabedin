@@ -1,0 +1,73 @@
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "A portfolio project",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "number",
+          "description": "Unique identifier"
+        },
+        "title": {
+          "type": "string",
+          "description": "Project title"
+        },
+        "category": {
+          "type": "string",
+          "description": "Project category"
+        },
+        "image": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL of the project image"
+        },
+        "summary": {
+          "type": "string",
+          "description": "Short summary of the project"
+        },
+        "colSpan": {
+          "type": "string",
+          "description": "Tailwind classes for column span"
+        },
+        "aspect": {
+          "type": "string",
+          "description": "Tailwind classes for aspect ratio"
+        },
+        "description": {
+          "type": "string",
+          "description": "Detailed description of the project"
+        },
+        "client": {
+          "type": "string",
+          "description": "Client name"
+        },
+        "year": {
+          "type": "string",
+          "description": "Year of the project"
+        },
+        "services": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of services provided"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp"
+        }
+      },
+      "required": ["id", "title", "category", "image", "summary", "colSpan", "aspect", "description", "client", "year", "services"]
+    }
+  },
+  "firestore": {
+    "projects": {
+      "schema": {
+        "$ref": "#/entities/Project"
+      },
+      "description": "Collection of portfolio projects"
+    }
+  }
+}
