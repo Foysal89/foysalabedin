@@ -52,17 +52,23 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Lumina",
-    category: "Premium Skincare Logo",
+    title: "LESSDUTIES",
+    category: "HOSPITALITY SOFTWARE LOGO",
     image:
-      "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=1000&auto=format&fit=crop&grayscale",
-    summary: "A delicate serif wordmark and minimalist packaging system.",
+      "https://i.postimg.cc/7PCb3T0s/Screenshot_2026_03_15_162931.png",
+    summary: "A minimal symbol and wordmark for a modern hospitality software platform.",
     colSpan: "col-span-12 lg:col-span-8",
     aspect: "aspect-[16/9] lg:aspect-[2/1]",
-    description: "Lumina is a premium skincare brand focused on natural, efficacious ingredients. Their identity needed to reflect purity, luxury, and scientific backing. We designed a delicate serif wordmark that feels refined and trustworthy. This was paired with a minimalist packaging system that uses ample white space and subtle typographic hierarchy to highlight the quality of the products. The overall effect is an identity that feels both clinical and luxurious.",
-    creativeDirection: "Lumina's creative direction was all about capturing purity and luxury. We used a delicate serif typeface and ample white space to create packaging and branding materials that feel both clinical and luxurious, resonating with a discerning, modern audience.",
-    client: "Lumina Skincare",
+    description: "LessDuties was conceptualized as a hospitality-focused software solution designed to simplify operations and reduce workload for service-based businesses. The objective was to create a visual identity that communicates ease, efficiency, and approachability while maintaining a clean and modern aesthetic.\n\nThe final identity combines a distinctive symbol with a refined wordmark, resulting in a mark that is both functional and memorable. Designed with scalability in mind, the logo performs effectively across digital platforms, from application icons to web interfaces, ensuring clarity and consistency in every context.",
+    creativeDirection: "The symbol is built using soft, fluid forms to convey ease and approachability, contrasting with rigid or overly technical visuals often seen in software branding. The shape subtly suggests a human-like form or interaction, reinforcing the idea of assistance and support.\n\nThe simplicity of the mark ensures strong recognition at small sizes, making it ideal for app icons and digital environments. The wordmark complements the symbol with a clean and modern typeface, while the highlighted letter adds a point of visual distinction, strengthening brand recall.\n\nThe color palette introduces a fresh, vibrant tone that reflects clarity and efficiency, helping the brand feel both modern and user-friendly.",
+    client: "LessDuties",
     year: "2024",
-    services: ["Brand Identity", "Packaging Design", "Art Direction"],
+    services: ["Brand Identity", "Logo Design"],
+    images: [
+      "https://i.postimg.cc/MXkCRLRr/Screenshot_2026_03_15_162753.png",
+      "https://i.postimg.cc/QCWLFDB9/Screenshot_2026_03_15_162830.png",
+      "https://i.postimg.cc/br2XZPG5/Screenshot_2026_03_15_162858.png",
+      "https://i.postimg.cc/ZY908ypL/Screenshot_2026_03_15_162953.png"
+    ],
   },
 ];
