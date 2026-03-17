@@ -7,6 +7,7 @@ export interface Project {
   colSpan: string;
   aspect: string;
   description: string;
+  creativeDirection: string;
   client: string;
   year: string;
   role: string;
@@ -24,6 +25,7 @@ export const projects: Project[] = [
     colSpan: "col-span-12 md:col-span-7",
     aspect: "aspect-[4/3]",
     description: "Aura is a modern skincare brand that emphasizes natural ingredients and sustainable packaging. The identity was designed to reflect purity, simplicity, and elegance. The logo features a custom sans-serif typeface with subtle organic curves, paired with a muted, earthy color palette.",
+    creativeDirection: "The creative direction focused on establishing a serene, natural aesthetic. We utilized a soft, earthy color palette combined with minimalist typography to evoke a sense of calm and purity, aligning perfectly with the brand's organic ethos.",
     client: "Aura Skincare",
     year: "2023",
     role: "Lead Designer",
@@ -42,6 +44,7 @@ export const projects: Project[] = [
     colSpan: "col-span-12 md:col-span-5",
     aspect: "aspect-[3/4]",
     description: "Nexus provides AI-driven analytics for enterprise businesses. The brand identity needed to convey trust, precision, and forward-thinking technology. We developed a geometric logo mark that symbolizes connection and data flow, complemented by a stark black and white palette with neon accents.",
+    creativeDirection: "For Nexus, the creative direction was driven by the concepts of connectivity and advanced technology. We employed sharp, geometric forms and a high-contrast monochromatic palette punctuated by vibrant neon highlights to create a futuristic and authoritative brand presence.",
     client: "Nexus Analytics",
     year: "2024",
     role: "Brand Designer",
@@ -60,6 +63,7 @@ export const projects: Project[] = [
     colSpan: "col-span-12 md:col-span-5",
     aspect: "aspect-[3/4]",
     description: "Lumina is a boutique architectural firm specializing in modern, light-filled residential spaces. The identity relies heavily on elegant, high-contrast serif typography to convey sophistication and timelessness. The logo is designed to be used as a subtle watermark on architectural plans and presentations.",
+    creativeDirection: "The creative direction for Lumina centered around light, space, and timeless elegance. We selected a refined serif typeface and a minimalist layout strategy to ensure the brand identity acts as a sophisticated frame for their stunning architectural photography, rather than competing with it.",
     client: "Lumina Architects",
     year: "2023",
     role: "Art Director",
@@ -78,6 +82,7 @@ export const projects: Project[] = [
     colSpan: "col-span-12 md:col-span-7",
     aspect: "aspect-[4/3]",
     description: "Verve is a specialty coffee roaster focused on single-origin beans. The brand needed to stand out on crowded cafe shelves. We created a bold, energetic identity using vibrant colors and dynamic typography that reflects the lively atmosphere of their flagship cafe.",
+    creativeDirection: "Verve's creative direction was all about capturing energy and passion. We used a vibrant, unexpected color palette and bold, expressive typography to create packaging and branding materials that pop off the shelf and resonate with a dynamic, modern audience.",
     client: "Verve Coffee Roasters",
     year: "2022",
     role: "Designer",

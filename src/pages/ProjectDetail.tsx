@@ -44,8 +44,8 @@ export default function ProjectDetail() {
           <ArrowLeft className="w-4 h-4" /> Back
         </a>
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-          <Link to="/" className="text-xl font-display font-bold tracking-widest uppercase">
-            Foysal
+          <Link to="/" className="text-lg md:text-xl font-display font-bold tracking-widest uppercase">
+            Foysal<span className="text-blue-500">.</span>
           </Link>
         </div>
       </nav>
@@ -78,24 +78,29 @@ export default function ProjectDetail() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-            <div className="lg:col-span-8">
-              <h2 className="text-2xl font-display font-bold uppercase tracking-tight mb-6">
-                About the Project
-              </h2>
-              <p className="text-text-secondary text-lg leading-relaxed">
-                {project.description}
-              </p>
+            <div className="lg:col-span-8 flex flex-col gap-12">
+              <div>
+                <h2 className="text-2xl font-display font-bold uppercase tracking-tight mb-6">
+                  About the Project
+                </h2>
+                <p className="text-text-secondary text-lg leading-relaxed whitespace-pre-wrap">
+                  {project.description}
+                </p>
+              </div>
+              
+              {project.creativeDirection && (
+                <div>
+                  <h2 className="text-2xl font-display font-bold uppercase tracking-tight mb-6">
+                    Creative Direction
+                  </h2>
+                  <p className="text-text-secondary text-lg leading-relaxed whitespace-pre-wrap">
+                    {project.creativeDirection}
+                  </p>
+                </div>
+              )}
             </div>
             
             <div className="lg:col-span-4 flex flex-col gap-8">
-              <div>
-                <h3 className="text-xs font-mono text-text-muted uppercase tracking-widest mb-2">Client</h3>
-                <p className="font-medium">{project.client}</p>
-              </div>
-              <div>
-                <h3 className="text-xs font-mono text-text-muted uppercase tracking-widest mb-2">Year</h3>
-                <p className="font-medium">{project.year}</p>
-              </div>
               <div>
                 <h3 className="text-xs font-mono text-text-muted uppercase tracking-widest mb-2">Services</h3>
                 <ul className="flex flex-col gap-1">
@@ -106,6 +111,21 @@ export default function ProjectDetail() {
               </div>
             </div>
           </div>
+
+          {project.images && project.images.length > 0 && (
+            <div className="mt-24 flex flex-col gap-12">
+              {project.images.map((img, idx) => (
+                <div key={idx} className="w-full bg-bg-panel overflow-hidden">
+                  <img
+                    src={img}
+                    alt={`${project.title} - Image ${idx + 1}`}
+                    className="w-full h-auto object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
         </motion.div>
       </main>
       
