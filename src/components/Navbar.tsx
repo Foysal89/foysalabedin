@@ -85,7 +85,7 @@ export default function Navbar() {
             onClick={(e) => handleScroll(e, "top")}
             className="text-lg md:text-xl font-display font-bold tracking-widest uppercase"
           >
-            Foysal
+            Foysal<span className="text-blue-500">.</span>
           </a>
         </div>
 

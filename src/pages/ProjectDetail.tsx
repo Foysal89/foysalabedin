@@ -1,14 +1,13 @@
+import React, { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
-import { useProjects } from "../hooks/useProjects";
+import { projects } from "../data/projects";
 import Footer from "../components/Footer";
-import { useEffect } from "react";
 
 export default function ProjectDetail() {
   const { id } = useParams();
   const navigate = useNavigate();
-  const { projects } = useProjects();
   const project = projects.find((p) => p.id === Number(id));
 
   // Scroll to top when component mounts

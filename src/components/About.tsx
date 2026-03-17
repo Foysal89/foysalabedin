@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
-import { useSiteContent } from "../hooks/useFirestore";
+import { siteContent } from "../data";
 
 export default function About() {
-  const { content } = useSiteContent();
+  const content = siteContent;
 
   return (
     <section
@@ -17,14 +17,15 @@ export default function About() {
           </h2>
         </div>
 
-        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-5 gap-8 lg:gap-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="md:col-span-3 lg:pr-8 lg:-ml-8"
           >
-            <p className="text-text-secondary text-lg leading-relaxed whitespace-pre-line">
+            <p className="text-text-secondary text-lg leading-relaxed whitespace-pre-line text-justify">
               {content.aboutText}
             </p>
           </motion.div>
@@ -34,7 +35,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-            className="flex flex-col gap-8"
+            className="md:col-span-2 flex flex-col gap-8"
           >
             <div>
               <h3 className="text-sm font-mono text-text-muted uppercase tracking-widest mb-4">

@@ -1,3 +1,4 @@
+import React from "react";
 import { motion } from "motion/react";
 import { useNavigate, useLocation } from "react-router-dom";
 
@@ -30,7 +31,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-4">
           <span className="font-display font-bold text-text-primary uppercase tracking-widest">
-            Foysal
+            Foysal<span className="text-blue-500">.</span>
           </span>
           <span className="w-1 h-1 bg-border-soft rounded-full" />
           <span>Logo and Identity Designer</span>

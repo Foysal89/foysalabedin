@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight } from "lucide-react";
 import { FaBehance, FaLinkedin, FaInstagram, FaDribbble } from "react-icons/fa";
@@ -78,7 +78,7 @@ export default function Contact() {
                   className="text-text-muted hover:text-text-primary transition-colors"
                   aria-label="Behance"
                 >
-                  <FaBehance className="w-6 h-6" />
+                  <span className="w-6 h-6 block"><FaBehance size={24} /></span>
                 </a>
                 <a
                   href="https://www.fiverr.com/ab_foysal/buying?source=avatar_menu_profile"
@@ -87,7 +87,7 @@ export default function Contact() {
                   className="text-text-muted hover:text-text-primary transition-colors"
                   aria-label="Fiverr"
                 >
-                  <SiFiverr className="w-8 h-8" />
+                  <span className="w-8 h-8 block"><SiFiverr size={32} /></span>
                 </a>
                 <a
                   href="https://www.linkedin.com/in/md-foysal-abedin-532914362"
@@ -96,7 +96,7 @@ export default function Contact() {
                   className="text-text-muted hover:text-text-primary transition-colors"
                   aria-label="LinkedIn"
                 >
-                  <FaLinkedin className="w-6 h-6" />
+                  <span className="w-6 h-6 block"><FaLinkedin size={24} /></span>
                 </a>
                 <a
                   href="https://www.instagram.com/foysal.who/"
@@ -105,7 +105,7 @@ export default function Contact() {
                   className="text-text-muted hover:text-text-primary transition-colors"
                   aria-label="Instagram"
                 >
-                  <FaInstagram className="w-6 h-6" />
+                  <span className="w-6 h-6 block"><FaInstagram size={24} /></span>
                 </a>
                 <a
                   href="https://dribbble.com/Foysal_Abedin"
@@ -114,7 +114,7 @@ export default function Contact() {
                   className="text-text-muted hover:text-text-primary transition-colors"
                   aria-label="Dribbble"
                 >
-                  <FaDribbble className="w-6 h-6" />
+                  <span className="w-6 h-6 block"><FaDribbble size={24} /></span>
                 </a>
               </div>
             </div>

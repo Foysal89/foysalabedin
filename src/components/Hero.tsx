@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
-import { useSiteContent } from "../hooks/useFirestore";
+import { siteContent } from "../data";
 
 export default function Hero() {
-  const { content } = useSiteContent();
+  const content = siteContent;
 
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-20 px-6 lg:px-12 overflow-hidden">
@@ -29,8 +29,8 @@ export default function Hero() {
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="text-[12vw] lg:text-[8vw] leading-[0.85] font-display font-bold tracking-tighter uppercase text-balance"
           >
-            {content.heroTitle.split(' ').slice(0, 2).join(' ')} <br />
-            {content.heroTitle.split(' ').slice(2).join(' ')}
+            {content.heroTitle.split(' ').slice(0, 1).join(' ')} <br />
+            {content.heroTitle.split(' ').slice(1).join(' ')}
           </motion.h1>
 
           <motion.p

@@ -1,11 +1,9 @@
 import { motion } from "motion/react";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useProjects } from "../hooks/useProjects";
+import { projects } from "../data/projects";
 
 export default function Projects() {
-  const { projects } = useProjects();
-
   return (
     <section id="work" className="py-32 px-6 lg:px-12 bg-bg-main">
       <div className="max-w-7xl mx-auto">
