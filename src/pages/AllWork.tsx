@@ -1,27 +1,56 @@
+import React, { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { projects } from "../data/projects";
+import Footer from "../components/Footer";
 
-export default function Projects() {
+export default function AllWork() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  const handleBack = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    navigate("/");
+    setTimeout(() => {
+      const element = document.getElementById("work");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  };
+
   return (
-    <section id="work" className="py-32 px-6 lg:px-12 bg-bg-main">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-20 gap-8">
-          <div>
-            <div className="text-xs font-mono text-text-muted mb-4">[02]</div>
-            <h2 className="text-5xl lg:text-7xl font-display font-bold uppercase tracking-tighter">
-              Selected Work
-            </h2>
-          </div>
-          <p className="max-w-sm text-text-secondary text-lg">
-            A curated selection of minimal logo identities designed for modern
-            brands.
-          </p>
+    <div className="min-h-screen bg-bg-main text-text-primary selection:bg-text-primary selection:text-bg-main">
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 pt-6 pb-8 bg-gradient-to-b from-bg-main via-bg-main/80 to-transparent">
+        <a href="/#work" onClick={handleBack} className="flex items-center gap-2 text-sm font-medium tracking-wide hover:text-text-secondary transition-colors">
+          <ArrowLeft className="w-4 h-4" /> Back
+        </a>
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          <Link to="/" className="text-lg md:text-xl font-display font-bold tracking-widest uppercase">
+            Foysal<span className="text-blue-500">.</span>
+          </Link>
         </div>
+      </nav>
+
+      <main className="pt-32 pb-20 px-6 lg:px-12 max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="mb-20"
+        >
+          <div className="text-xs font-mono text-text-muted mb-4">[ALL WORK]</div>
+          <h1 className="text-5xl lg:text-7xl font-display font-bold uppercase tracking-tighter">
+            Archive
+          </h1>
+        </motion.div>
 
         <div className="grid grid-cols-12 gap-6 lg:gap-12">
-          {projects.slice(0, 4).map((project, index) => (
+          {projects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 40 }}
@@ -67,17 +96,9 @@ export default function Projects() {
             </motion.div>
           ))}
         </div>
-
-        <div className="mt-20 flex justify-center">
-          <Link
-            to="/work"
-            className="group flex items-center gap-4 px-8 py-4 border border-text-primary/10 hover:border-text-primary/30 rounded-full transition-all duration-300"
-          >
-            <span className="text-sm font-mono uppercase tracking-widest">View All Work</span>
-            <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </Link>
-        </div>
-      </div>
-    </section>
+      </main>
+      
+      <Footer />
+    </div>
   );
 }
