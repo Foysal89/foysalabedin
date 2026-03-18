@@ -70,11 +70,11 @@ export default function AllWork() {
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="object-cover w-full h-full opacity-80 grayscale group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    className="object-cover w-full h-full opacity-80 grayscale group-hover:grayscale-0 group-active:grayscale-0 group-hover:opacity-100 group-active:opacity-100 group-hover:scale-105 group-active:scale-105 transition-all duration-700"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
-                  <div className="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent group-active:bg-transparent transition-colors duration-500" />
+                  <div className="absolute top-4 right-4 w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transform translate-y-4 group-hover:translate-y-0 group-active:translate-y-0 transition-all duration-500">
                     <ArrowUpRight className="w-5 h-5 text-text-primary" />
                   </div>
                 </div>
