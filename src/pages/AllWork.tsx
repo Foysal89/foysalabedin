@@ -45,7 +45,7 @@ export default function AllWork() {
         >
           <div className="text-xs font-mono text-text-muted mb-4">[ALL WORK]</div>
           <h1 className="text-5xl lg:text-7xl font-display font-bold uppercase tracking-tighter">
-            Archive
+            SHOWCASE
           </h1>
         </motion.div>
 
