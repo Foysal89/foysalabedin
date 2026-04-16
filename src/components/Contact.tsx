@@ -81,7 +81,7 @@ export default function Contact() {
                   <span className="w-6 h-6 block"><FaBehance size={24} /></span>
                 </a>
                 <a
-                  href="https://www.fiverr.com/ab_foysal/buying?source=avatar_menu_profile"
+                  href="https://www.fiverr.com/s/WEyL7VQ"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-muted hover:text-text-primary transition-colors"
